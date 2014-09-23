@@ -1,0 +1,154 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    width: 100%;
+    background-color: #AAA;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.content {
+    position: relative;
+    padding: 40px;
+}
+
+.left_part {
+    display: inline-block;
+    position: relative;
+    left: 0;
+    width: 75%;
+}
+
+.right_part {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    width: 25%;
+}
+
+.message_board {
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.messages {
+    max-height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.message {
+    width: 100%;
+    padding: 10px;
+}
+
+.message.correct,
+.message.won{
+    color: green;
+}
+
+.message.wrong,
+.message.lost{
+    color: red;
+}
+
+.message.won,
+.message.lost {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.header_text {
+    font-size: 2.6rem;
+    color: #EEE;
+}
+
+#input_fields {
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    padding: 20px 50px;
+    margin: 20px;
+    font-size: 2.0rem;
+}
+
+.single_char {
+    width: 40px;
+    height: 2.6rem;
+    margin: 0px 5px;
+    font-size: 2.0rem;
+}
+
+.single_char.red {
+    border: 2px solid red;
+}
+
+.valid_char {
+    vertical-align: bottom;
+    margin: 10px;
+}
+
+.user_input,
+.previous_inputs,
+.attempts_left {
+    font-size: 2.0rem;
+    padding: 20px;
+}
+
+@media screen and (max-width: 320px) {
+    .content {
+        padding: 10px;
+    }
+    
+    .left_part,
+    .right_part {
+        width: 100%;
+    }
+    
+    .right_part {
+        position: relative;
+    }
+    .valid_char {
+        margin: 4px;
+    }
+    .user_input,
+    .previous_inputs,
+    .attempts_left {
+        font-size: 1.4rem;
+        padding: 10px;
+    }
+    .header_text{
+        font-size: 1.6rem;
+    }
+    #input_fields {
+        padding: 0;
+        margin: 0;
+        font-size: 2.0rem;
+    }    
+    .single_char {
+        width: 25px;
+        height: 1.8rem;
+        font-size: 1.4rem;
+    }
+    .message_board{
+        padding: 0px 10px;
+    }
+    .messages {
+        max-height: 140px;
+        padding-left: 35px;
+    }
+    .last_try {
+        display: inline-block;
+        width: 170px;
+        overflow-x: hidden;
+        vertical-align: middle;
+    }
+}
